@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "=========================================="
-echo "🍎 Empezando la transformación a macOS (Fedora 43)... 🍎"
+echo "🍎 Starting macOS transformation (Fedora 43)... 🍎"
 echo "=========================================="
 
-rm -rf ~/Descargas/mac-rice
-mkdir -p ~/Descargas/mac-rice
+rm -rf /tmp/mac-rice
+mkdir -p /tmp/mac-rice
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -13,7 +13,7 @@ sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-ex
 
 flatpak install -y flathub com.mattjakeman.ExtensionManager
 
-cd ~/Descargas/mac-rice
+cd /tmp/mac-rice
 
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme
@@ -68,9 +68,9 @@ gsettings set org.gnome.desktop.background picture-uri-dark "file://$HOME/.local
 
 gsettings set org.gnome.shell.extensions.just-perfection clock-menu-position 2
 
-rm -rf ~/Descargas/mac-rice
+rm -rf /tmp/mac-rice
 
 echo "=========================================="
-echo "✅ ¡Transformación completada con éxito! ✅"
-echo "⚠️ OBLIGATORIO: Cierra la sesión y vuelve a entrar para cargar la barra superior."
+echo "✅ Transformation completed successfully! ✅"
+echo "⚠️ MANDATORY: Log out and log back in to load the top bar."
 echo "=========================================="

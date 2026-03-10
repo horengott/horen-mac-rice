@@ -1,4 +1,4 @@
-# Fedora macOS Rice: Horengott's Personalized Setup
+# Fedora macOS Rice: Hörengott's Personalized Setup
 
 This is my macOS "rice" (custom desktop setup) for Fedora Linux. Clone my exact setup to get the visual appearance and workflow of a Mac in a matter of minutes.
 
@@ -32,3 +32,16 @@ Follow these steps in your terminal to replicate this setup on any Fedora Linux.
 1. **Clone this repository:**
    ```bash
    git clone [https://github.com/horengott/horen-mac-rice.git](https://github.com/horengott/horen-mac-rice.git)
+   ```
+
+2. **Change directory:**
+   ```bash
+   cd horen-mac-rice
+   ```
+
+3. **Install:**
+   ```bash
+   bash ./install-rice.sh
+   ```
+
+Arsenii Hörengott
