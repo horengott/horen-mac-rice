@@ -1,34 +1,34 @@
 # Fedora macOS Rice: Horengott's Personalized Setup
 
-Este es mi "rice" (configuración de escritorio personalizada) de macOS para Fedora Linux. Reclona mi setup exacto para obtener el aspecto visual y el flujo de trabajo de un Mac en cuestión de minutos.
+This is my macOS "rice" (custom desktop setup) for Fedora Linux. Clone my exact setup to get the visual appearance and workflow of a Mac in a matter of minutes.
 
-## Captura de pantalla
+## Screenshot
 
-![Mi Rice Mac en Fedora](example.jpg)
+![My Mac Rice on Fedora](example.jpg)
 
-**Descripción:** Un escritorio de Fedora Linux transformado en un clon de macOS. Muestra un fondo de pantalla degradado, un panel superior con la barra de menú global y el reloj centrados, y un Dock inferior flotante con iconos redondeados. En el centro de la pantalla, la terminal muestra `fastfetch` con detalles del sistema. Los botones de las ventanas (cerrar, minimizar, maximizar) están a la izquierda y tienen el diseño de semáforo de Mac.
+**Description:** A Fedora Linux desktop transformed into a macOS clone. It features a gradient wallpaper, a top panel with the global menu bar and centered clock, and a floating bottom Dock with rounded icons. In the center of the screen, the terminal displays `fastfetch` with system details. The window buttons (close, minimize, maximize) are on the left and feature the Mac traffic light design.
 
-## Lista de Componentes Instalados
+## List of Installed Components
 
-El script de instalación automatiza la instalación y configuración de los siguientes elementos:
+The installation script automates the installation and configuration of the following elements:
 
-* **Entorno de Escritorio:** GNOME (Fedora Workstation).
-* **Tema Base (Tema GTK):** WhiteSur GTK (Tema oscuro).
-* **Temas Adicionales:** Tema de Firefox (Safari-style), Tema de Ulauncher (Spotlight-style).
-* **Paquetes de Iconos:** Paquete de iconos WhiteSur.
-* **Tema de Cursor:** McMojave cursors.
-* **Tipografías (Fuentes):** Fuentes oficiales de Apple San Francisco Pro (SF Pro).
-* **Extensiones de GNOME:** User Themes (para aplicar el tema base al sistema) y Desktop Icons (Ding, para iconos en el escritorio).
-* **Programas Base:** Ulauncher (buscador), GNOME Sushi (Quick Look para previsualización de archivos).
-* **Utilidades de Terminal:** `fastfetch` (información del sistema), `btop` (monitor de recursos), `cmatrix` y `cowsay`.
-* **Herramientas:** Git, Flatpak.
-* **Fondos de Pantalla:** Paquete completo de fondos de pantalla WhiteSur.
-* **Configuraciones de GNOME:** Posiciona automáticamente los botones de la ventana a la izquierda y les aplica el diseño de semáforo de Mac.
+* **Desktop Environment:** GNOME (Fedora Workstation).
+* **Base Theme (GTK Theme):** WhiteSur GTK (Dark theme).
+* **Additional Themes:** Firefox Theme (Safari-style), Ulauncher Theme (Spotlight-style).
+* **Icon Packs:** WhiteSur icon pack.
+* **Cursor Theme:** McMojave cursors.
+* **Typography (Fonts):** Official Apple San Francisco Pro fonts (SF Pro).
+* **GNOME Extensions:** User Themes (to apply the base theme to the system), Desktop Icons (Ding, for desktop icons), and Compiz alike magic lamp effect (for the macOS genie window minimize animation).
+* **Base Programs:** Ulauncher (search engine), GNOME Sushi (Quick Look for file previews).
+* **Terminal Utilities:** `fastfetch` (system info), `btop` (resource monitor), `cmatrix`, and `cowsay`.
+* **Tools:** Git, Flatpak.
+* **Wallpapers:** Complete WhiteSur wallpaper pack.
+* **GNOME Configurations:** Automatically positions window buttons to the left and applies the Mac traffic light design.
 
-## Instrucciones de Instalación
+## Installation Instructions
 
-Sigue estos pasos en tu terminal para replicar este setup en cualquier Fedora Linux.
+Follow these steps in your terminal to replicate this setup on any Fedora Linux.
 
-1. **Clonar este repositorio:**
+1. **Clone this repository:**
    ```bash
-   git clone [https://github.com/tu-usuario/tu-repo.git](https://github.com/tu-usuario/tu-repo.git)
+   git clone [https://github.com/horengott/horen-mac-rice.git](https://github.com/horengott/horen-mac-rice.git)
