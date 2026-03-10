@@ -1,28 +1,23 @@
 #!/bin/bash
 
 echo "=========================================="
-echo "🍎 Empezando la transformación a macOS... 🍎"
+echo "🍎 Empezando la transformación a macOS (Fedora 43)... 🍎"
 echo "=========================================="
 
-# 1. Habilitar repositorios extra (Ulauncher y Flathub)
-echo "📦 Preparando repositorios..."
-sudo dnf install -y dnf-plugins-core
-sudo dnf copr enable -y agriffis/ulauncher
+rm -rf ~/Descargas/mac-rice
+mkdir -p ~/Descargas/mac-rice
+
+echo "📦 Preparando repositorios de Flatpak..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# 2. Instalar programas y dependencias
-echo "📦 Instalando herramientas base..."
-sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme
-echo "📦 Instalando utilidades..."
-sudo dnf install -y ulauncher sushi cmatrix fastfetch cowsay btop
+echo "📦 Instalando herramientas base y utilidades..."
+sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme ulauncher sushi cmatrix fastfetch cowsay btop --skip-broken
+
 echo "📦 Instalando Gestor de Extensiones..."
 flatpak install -y flathub com.mattjakeman.ExtensionManager
 
-# 3. Crear carpeta de descargas
-mkdir -p ~/Descargas/mac-rice
 cd ~/Descargas/mac-rice
 
-# 4. Descargar e instalar los temas visuales
 echo "🎨 Instalando temas e iconos..."
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme
@@ -57,3 +52,26 @@ cp -r San-Francisco-Pro-Fonts/*.otf ~/.local/share/fonts/
 fc-cache -f -v
 
 echo "🌄 Instalando fondos de pantalla..."
+git clone https://github.com/vinceliuice/WhiteSur-wallpapers.git
+cd WhiteSur-wallpapers
+sudo ./install-wallpapers.sh
+cd ..
+
+echo "⚙️ Aplicando cambios de GNOME..."
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
+gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Dark'
+gsettings set org.gnome.desktop.wm.preferences theme 'WhiteSur-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur'
+gsettings set org.gnome.desktop.interface cursor-theme 'McMojave'
+gsettings set org.gnome.desktop.interface font-name 'SF Pro Text Regular 10'
+gsettings set org.gnome.desktop.interface document-font-name 'SF Pro Text Regular 10'
+
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Dark'
+
+rm -rf ~/Descargas/mac-rice
+
+echo "=========================================="
+echo "✅ ¡Transformación completada con éxito! ✅"
+echo "⚠️ ATENCIÓN: Cierra sesión y vuelve a entrar para ver los cambios del panel y cursor."
+echo "=========================================="
