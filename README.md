@@ -31,7 +31,7 @@ Follow these steps in your terminal to replicate this setup on any Fedora Linux.
 
 1. **Clone this repository:**
    ```bash
-   git clone [https://github.com/horengott/horen-mac-rice.git](https://github.com/horengott/horen-mac-rice.git)
+   git clone https://github.com/horengott/horen-mac-rice.git
    ```
 
 2. **Change directory:**
@@ -44,4 +44,5 @@ Follow these steps in your terminal to replicate this setup on any Fedora Linux.
    bash ./install-rice.sh
    ```
 
-Arsenii Hörengott
+
+**Arsenii Hörengott**
