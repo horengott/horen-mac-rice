@@ -9,7 +9,7 @@ mkdir -p /tmp/mac-rice
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme gnome-shell-extension-just-perfection ulauncher sushi cmatrix fastfetch cowsay btop --skip-broken
+sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme gnome-shell-extension-just-perfection ulauncher sushi --skip-broken
 
 flatpak install -y flathub com.mattjakeman.ExtensionManager
 

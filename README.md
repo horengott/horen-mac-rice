@@ -20,7 +20,6 @@ The installation script automates the installation and configuration of the foll
 * **Typography (Fonts):** Official Apple San Francisco Pro fonts (SF Pro).
 * **GNOME Extensions:** User Themes (to apply the base theme to the system), Desktop Icons (Ding, for desktop icons), and Compiz alike magic lamp effect (for the macOS genie window minimize animation).
 * **Base Programs:** Ulauncher (search engine), GNOME Sushi (Quick Look for file previews).
-* **Terminal Utilities:** `fastfetch` (system info), `btop` (resource monitor), `cmatrix`, and `cowsay`.
 * **Tools:** Git, Flatpak.
 * **Wallpapers:** Complete WhiteSur wallpaper pack.
 * **GNOME Configurations:** Automatically positions window buttons to the left and applies the Mac traffic light design.
