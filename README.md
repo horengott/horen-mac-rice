@@ -22,6 +22,7 @@ The installation script automates the installation and configuration of the foll
 * **Base Programs:** Ulauncher (search engine), GNOME Sushi (Quick Look for file previews).
 * **Tools:** Git, Flatpak.
 * **Wallpapers:** Complete WhiteSur wallpaper pack.
+* **Clipboard Manager:** Clipboard Indicator (to save and access clipboard history using the Win + V shortcut).
 * **GNOME Configurations:** Automatically positions window buttons to the left and applies the Mac traffic light design.
 
 ## Installation Instructions

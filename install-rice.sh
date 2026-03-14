@@ -9,7 +9,7 @@ mkdir -p /tmp/mac-rice
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme gnome-shell-extension-just-perfection ulauncher sushi --skip-broken
+sudo dnf install -y git flatpak gnome-tweaks gnome-extensions-app gnome-shell-extension-user-theme ulauncher sushi --skip-broken
 
 flatpak install -y flathub com.mattjakeman.ExtensionManager
 
@@ -49,11 +49,14 @@ mkdir -p ~/.local/share/backgrounds
 curl -L -o ~/.local/share/backgrounds/mac-wallpaper-light.jpg "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/1080p/Monterey/Monterey-1.jpg"
 curl -L -o ~/.local/share/backgrounds/mac-wallpaper-dark.jpg "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/1080p/Monterey/Monterey-2.jpg"
 
+mkdir -p ~/.local/share/gnome-shell/extensions/
+git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git ~/.local/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
+
 gsettings set org.gnome.shell disable-user-extensions false
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable just-perfection-desktop@just-perfection
+gnome-extensions enable clipboard-indicator@tudmotu.com
 
-gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
 gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Dark'
 gsettings set org.gnome.desktop.wm.preferences theme 'WhiteSur-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur'
@@ -66,11 +69,12 @@ gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Dark'
 gsettings set org.gnome.desktop.background picture-uri "file://$HOME/.local/share/backgrounds/mac-wallpaper-light.jpg"
 gsettings set org.gnome.desktop.background picture-uri-dark "file://$HOME/.local/share/backgrounds/mac-wallpaper-dark.jpg"
 
-gsettings set org.gnome.shell.extensions.just-perfection clock-menu-position 2
+gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
+dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu "['<Super>v']"
 
 rm -rf /tmp/mac-rice
 
 echo "=========================================="
 echo "✅ Transformation completed successfully! ✅"
-echo "⚠️ MANDATORY: Log out and log back in to load the top bar."
+echo "⚠️ MANDATORY: Log out and log back in to load the top bar and extensions."
 echo "=========================================="
